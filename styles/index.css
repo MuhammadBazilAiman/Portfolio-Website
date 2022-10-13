@@ -1,0 +1,95 @@
+/* This is custom variable */
+:root {
+  --primary-green: #64ffda;
+  --secondary-gray: #ccd6f6;
+
+  /* font sizes */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+}
+
+/* General Style */
+html {
+  font-family: system-ui;
+  /* system ui will choose the defualt font used on our windows */
+}
+
+body {
+  background-color: #0a192f;
+  color: #8892b0;
+}
+
+/* Remove Default Style */
+/* (*) symbol means we select everything in the html  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.highlight {
+  color: var(--primary-green);
+}
+
+.underline {
+  border-bottom-width: 0;
+  /* we set 0 first so it starts from zero until the end of the width */
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(var(--primary-green), var(--primary-green));
+  /* firstly it starts with transparent then it transition to green */
+  background-size: 0 2px;
+  /* 2px on the up and down */
+  background-position: 0 100%;
+  /* 100% so it will take up all the spaces */
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.underline:hover {
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  /* background-size & position kena related dgn sebelum punya vakue utk bagi ada transition effect tu kot */
+}
+
+/* Layout */
+main {
+  max-width: 24rem;
+  margin: 0 auto;
+  /* top & bottom, left & right; auto means it calculates for you  */
+}
+
+/* Medium */
+@media (min-width: 640px) {
+  main {
+    max-width: 32rem;
+  }
+}
+
+/* Large */
+@media (min-width: 768px) {
+  main {
+    max-width: 42rem;
+  }
+}
+
+/* Extra Large */
+@media (min-width: 1024px) {
+  main {
+    max-width: 48rem;
+  }
+}
+
+/* 2XL */
+@media (min-width: 1280px) {
+  main {
+    max-width: 64rem;
+  }
+}

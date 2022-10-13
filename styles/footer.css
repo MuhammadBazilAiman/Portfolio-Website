@@ -1,0 +1,38 @@
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  /* basically what this does is it return it to its original position */
+  align-items: center;
+  /* horizontally align this to center */
+  padding: 2.5rem;
+}
+
+.footer__socials {
+  display: flex;
+  /* makes it in one row */
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.footer__socials > * + * {
+  margin-left: 2.5rem;
+}
+
+.social__item {
+  list-style-type: none;
+}
+
+.social__link {
+  color: #8892b0;
+}
+
+.social__link:hover {
+  color: var(--primary-green);
+}
+
+.social__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+  /* means we fill the icon with the color we declare in line 20 */
+}

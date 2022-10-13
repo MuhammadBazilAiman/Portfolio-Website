@@ -1,0 +1,103 @@
+.about__section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__title {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-gray);
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+.about__container {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__title > span {
+  font-size: var(--text-base);
+  /* text base is actually the default size which is 16px */
+  padding-right: 1rem;
+  color: var(--primary-green);
+}
+
+.about__content {
+  margin-bottom: 3rem;
+  flex: 1;
+  padding-right: 2.5rem;
+}
+
+.about__content > * + * {
+  margin-top: 1.25rem;
+}
+
+.about__text {
+  font-size: var(--text-lg);
+}
+
+.about__text > * + * {
+  margin-top: 1rem;
+}
+
+.about__technologies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* fr means fraction. 1fr 1fr means both of the column will share the same spacing */
+  row-gap: 0.5rem;
+  list-style-position: inside;
+  /* it brings the table inside (?) how ? */
+  font-size: var(--text-sm);
+}
+
+.about__technologies > li::marker {
+  color: var(--primary-green);
+}
+.about__image {
+  width: 18rem;
+  height: 18rem;
+  /* this is actually the container size */
+}
+
+.about__image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .about__title {
+    font-size: var(--text-2xl);
+  }
+
+  .about__title > span {
+    font-size: var(--text-lg);
+  }
+}
+
+@media (min-width: 768px) {
+  .about__title {
+    font-size: var(--text-3xl);
+  }
+
+  .about__title > span {
+    font-size: var(--text-xl);
+  }
+
+  .about__container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .about__content {
+    margin-bottom: 0;
+    /* dowan the bottom margin because the image is not on the bottom already, but it is on the side */
+    margin-right: 3rem;
+  }
+}
